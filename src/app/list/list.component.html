@@ -1,0 +1,15 @@
+<p>list works!</p>
+<h1>Shopping List</h1>
+<div class="container">
+<input type="text" [(ngModel)]="itemname" placeholder="Enter item name"
+class="inputclass">
+<input type="text" [(ngModel)]="itemprice" placeholder="Enter item price"
+class="inputclass">
+<button type="button" (click)="add()" class="buttonclass">Add</button>
+<ul>
+<li *ngFor="let item of shoppingList; let i = index">
+{{ item }}
+<button type="button" (click)="remove(i)" class="buttonclassremove" > Remove</button>
+</li>
+</ul>
+</div>
